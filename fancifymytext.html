@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify My Text</title>
+		<!-- link to your JS file -->
+		<script src="fancifymytext.js"></script>
+        <!-- Basic styles for better layout -->
+        <style>
+            fieldset {
+                border: 1px solid #ccc;
+                margin-bottom: 15px;
+            }
+            legend {
+                font-weight: bold;
+                padding: 0 5px;
+            }
+            textarea {
+                display: block; /* Ensures textarea takes its own line */
+                margin-top: 5px;
+            }
+            .radio-group label { /* Slightly better spacing for radio labels */
+                margin-right: 10px;
+            }
+        </style>
+	</head>
+
+	<body>
+		<h1>Fancify My Text</h1>
+
+        <fieldset>
+            <legend>Text</legend>
+            <textarea id="textBox" name="userText" rows="4" cols="30"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fancify</legend>
+            <button type="button" onclick="makeBigger()">Bigger!</button> <br><br> 
+            <!-- Added line break for spacing -->
+            <div class="radio-group"> 
+                <input type="radio" id="fancyRadio" name="fancyType" value="fancy" onchange="applyStyles()">
+                <label for="fancyRadio">FancyShmancy</label> 
+
+                <input type="radio" id="boringRadio" name="fancyType" value="boring" onchange="applyStyles()">
+                <label for="boringRadio">BoringBetty</label> 
+            </div>
+            <br> <!-- Added line break for spacing -->
+            <button type="button" onclick="mooifyText()">Moo</button>
+        </fieldset>
+
+	</body>
+</html>
